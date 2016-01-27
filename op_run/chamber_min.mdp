@@ -1,0 +1,18 @@
+Title             = Enrgy minimization (NVT distribution)
+; Run parameters
+define		  = -DFLEXIBLE
+integrator        = steep         
+nsteps            = 5000       ; 2 * 5000 = 10 ps
+dt                = 0.002      ; 2 fs
+
+; Output control
+
+; Parameters describing how to find the neighbors of each atom and how to calculate the interaction
+nstlist           = 5          ; Frequency to update the neighbor list and long range forces
+ns_type           = grid       ; Method to determine neighbor list (simple, grid)
+rlist             = 1.0        ; Cut-off for making neighbor list (short range forces)
+coulombtype       = PME        ; Treatment of long range electrostatic interactions
+rcoulomb          = 1.0        ; Short-range electrostatics cut-off
+rvdw              = 1.0        ; Short range van der waals cut-off
+pbc               = xyz        ; Periodic boundary conditions
+

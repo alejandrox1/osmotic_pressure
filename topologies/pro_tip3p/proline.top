@@ -1,0 +1,235 @@
+;
+;	File 'topol.top' was generated
+;	By user: alarcj (1000)
+;	On host: alarcj-ThinkPad-T430s
+;	At date: Mon Jun 29 10:00:20 2015
+;
+;	This is a standalone topology file
+;
+;	It was generated using program:
+;	pdb2gmx - VERSION 4.6.5
+;
+;	Command line was:
+;	pdb2gmx -f 1_pro.pdb -water tip3p -o 1_pro.gro -p topol.top -ter -ignh 
+;
+;	Force field was read from the standard Gromacs share directory.
+;
+
+; Include forcefield parameters
+; include "oplsaa.ff/forcefield.itp"
+#include "ffoplsaa.itp"
+
+[ moleculetype ]
+; Name            nrexcl
+Protein_chain_X     3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 PRO rtp PRO  q  0.0
+     1   opls_309      1    PRO      N      1       -0.2    14.0067   ; qtot -0.2
+     2   opls_310      1    PRO     H1      1       0.31      1.008   ; qtot 0.11
+     3   opls_310      1    PRO     H2      1       0.31      1.008   ; qtot 0.42
+     4   opls_246      1    PRO     CA      1       0.13     12.011   ; qtot 0.55
+     5   opls_140      1    PRO     HA      1       0.06      1.008   ; qtot 0.61
+     6   opls_136      1    PRO     CB      2      -0.12     12.011   ; qtot 0.49
+     7   opls_140      1    PRO    HB1      2       0.06      1.008   ; qtot 0.55
+     8   opls_140      1    PRO    HB2      2       0.06      1.008   ; qtot 0.61
+     9   opls_136      1    PRO     CG      3      -0.12     12.011   ; qtot 0.49
+    10   opls_140      1    PRO    HG1      3       0.06      1.008   ; qtot 0.55
+    11   opls_140      1    PRO    HG2      3       0.06      1.008   ; qtot 0.61
+    12   opls_296      1    PRO     CD      4       0.17     12.011   ; qtot 0.78
+    13   opls_140      1    PRO    HD1      4       0.06      1.008   ; qtot 0.84
+    14   opls_140      1    PRO    HD2      4       0.06      1.008   ; qtot 0.9
+    15   opls_271      1    PRO      C      5        0.7     12.011   ; qtot 1.6
+    16   opls_272      1    PRO     O1      5       -0.8    15.9994   ; qtot 0.8
+    17   opls_272      1    PRO     O2      5       -0.8    15.9994   ; qtot 0
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1 
+    1     3     1 
+    1     4     1 
+    1    12     1 
+    4     5     1 
+    4     6     1 
+    4    15     1 
+    6     7     1 
+    6     8     1 
+    6     9     1 
+    9    10     1 
+    9    11     1 
+    9    12     1 
+   12    13     1 
+   12    14     1 
+   15    16     1 
+   15    17     1 
+
+[ pairs ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     7     1 
+    1     8     1 
+    1    10     1 
+    1    11     1 
+    1    16     1 
+    1    17     1 
+    2     5     1 
+    2     6     1 
+    2     9     1 
+    2    13     1 
+    2    14     1 
+    2    15     1 
+    3     5     1 
+    3     6     1 
+    3     9     1 
+    3    13     1 
+    3    14     1 
+    3    15     1 
+    4    10     1 
+    4    11     1 
+    4    13     1 
+    4    14     1 
+    5     7     1 
+    5     8     1 
+    5     9     1 
+    5    12     1 
+    5    16     1 
+    5    17     1 
+    6    13     1 
+    6    14     1 
+    6    16     1 
+    6    17     1 
+    7    10     1 
+    7    11     1 
+    7    12     1 
+    7    15     1 
+    8    10     1 
+    8    11     1 
+    8    12     1 
+    8    15     1 
+    9    15     1 
+   10    13     1 
+   10    14     1 
+   11    13     1 
+   11    14     1 
+   12    15     1 
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     3     1 
+    2     1     4     1 
+    2     1    12     1 
+    3     1     4     1 
+    3     1    12     1 
+    4     1    12     1 
+    1     4     5     1 
+    1     4     6     1 
+    1     4    15     1 
+    5     4     6     1 
+    5     4    15     1 
+    6     4    15     1 
+    4     6     7     1 
+    4     6     8     1 
+    4     6     9     1 
+    7     6     8     1 
+    7     6     9     1 
+    8     6     9     1 
+    6     9    10     1 
+    6     9    11     1 
+    6     9    12     1 
+   10     9    11     1 
+   10     9    12     1 
+   11     9    12     1 
+    1    12     9     1 
+    1    12    13     1 
+    1    12    14     1 
+    9    12    13     1 
+    9    12    14     1 
+   13    12    14     1 
+    4    15    16     1 
+    4    15    17     1 
+   16    15    17     1 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+    2     1     4     5     3 
+    2     1     4     6     3 
+    2     1     4    15     3 
+    3     1     4     5     3 
+    3     1     4     6     3 
+    3     1     4    15     3 
+   12     1     4     5     3 
+   12     1     4     6     3 
+   12     1     4    15     3	              -5.72371 -18.33847  -5.23419  29.29636   0.00000   0.00000             ; Pro (fit to AM1) CD-N-CA-C, JT-R 2/10/97 
+    2     1    12     9     3 
+    2     1    12    13     3 
+    2     1    12    14     3 
+    3     1    12     9     3 
+    3     1    12    13     3 
+    3     1    12    14     3 
+    4     1    12     9     3 
+    4     1    12    13     3 
+    4     1    12    14     3 
+    1     4     6     7     3 
+    1     4     6     8     3 
+    1     4     6     9     3 
+    5     4     6     7     3 
+    5     4     6     8     3 
+    5     4     6     9     3 
+   15     4     6     7     3 
+   15     4     6     8     3 
+   15     4     6     9     3 
+    1     4    15    16     3 
+    1     4    15    17     3 
+    5     4    15    16     3 
+    5     4    15    17     3 
+    6     4    15    16     3 
+    6     4    15    17     3 
+    4     6     9    10     3 
+    4     6     9    11     3 
+    4     6     9    12     3 
+    7     6     9    10     3 
+    7     6     9    11     3 
+    7     6     9    12     3 
+    8     6     9    10     3 
+    8     6     9    11     3 
+    8     6     9    12     3 
+    6     9    12     1     3 
+    6     9    12    13     3 
+    6     9    12    14     3 
+   10     9    12     1     3 
+   10     9    12    13     3 
+   10     9    12    14     3 
+   11     9    12     1     3 
+   11     9    12    13     3 
+   11     9    12    14     3 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3
+    4    16    15    17     1    improper_O_C_X_Y
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre.itp"
+#endif
+
+; Include water topology
+#include "tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_X 	 3
+SOL              1723
