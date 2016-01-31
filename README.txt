@@ -25,5 +25,3 @@ analyze_simulations.sh
 	stat.py
 
 
-Notes:
-	combine2gro.sh has has hardcoded values for the box size (as of Sat Jan 30 19:47:19 EST 2016 we still need to fix this).
